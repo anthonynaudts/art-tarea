@@ -1,0 +1,160 @@
+@import 'resetearCSS.css';
+
+:root{
+    --color-principal: #142850;
+    --color-secundario: #27496d;
+    --color-gris: #dae1e7;
+    --color-blanco: #fff;
+    --ancho-input-login: 60%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.login{
+    display: flex;
+}
+
+.logo_login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: var(--color-principal);
+    height: 100vh;
+    text-align: center;
+}
+
+.titulo_principal{
+    color: var(--color-blanco);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.footer{
+    color: var(--color-blanco);
+    font-size: 0.6em;
+   /* position: absolute;
+    bottom: 0;
+    margin: 4px;*/
+}
+
+.form_login{
+    width: 50%;
+    height: 100vh;
+    background-color: var(--color-blanco);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.login_input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--color-gris);
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    width: var(--ancho-input-login);
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+}
+
+.bottom-login{
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    width: var(--ancho-input-login);
+    text-align: center;
+    font-size: 1em;
+    border: 0;
+    margin-bottom: 6px;
+    padding: 6px 12px;
+    border-radius: 15px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out .2s;
+    cursor: pointer;
+}
+
+.bottom-login:hover{
+    background-color: var(--color-secundario);
+}
+
+.carga{
+    display: block;
+    background-color: var(--color-secundario);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    border: 5px solid var(--color-blanco);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-radius: 50%;
+    margin-bottom: 51px;
+    animation: loader 2s infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+  }
+
+@media only screen and (max-width: 654px){
+
+    .login{
+        flex-direction: column;
+    }
+
+    .logo_login{
+        width: 100%;
+        height: 25vh;
+        order: 1;
+        /*margin-bottom: 10vh;*/
+    }
+
+    .form_login{
+        display: flex;
+        width: 100%;
+        order: 2;
+        height: 75vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form{
+        height: auto;
+    }
+
+}
